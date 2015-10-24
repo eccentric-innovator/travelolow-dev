@@ -35,6 +35,7 @@ class search(views.MethodView):
             session['var'] = self.flights
             return str(self.flights)
         else:
+            ##Need to add flashed message to the Template
             flash(self.flights[0]["Error"])
             return redirect(url_for('search'))
 
